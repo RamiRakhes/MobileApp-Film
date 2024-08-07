@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp"
+    android:background="#000000">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:layout_marginBottom="16dp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/logo"
+        android:backgroundTint="@color/white"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <EditText
+                android:id="@+id/et_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No"
+                android:textColorHint="@color/white"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/et_marque"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Marque"
+                android:textColorHint="@color/white"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/et_annee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Année"
+                android:textColorHint="@color/white"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/et_prix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Prix"
+                android:textColorHint="@color/white"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/et_couleur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Couleur"
+                android:textColorHint="@color/white"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sauvegarder"
+                android:textColorHint="@color/white"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btn_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Age de l'auto"
+                android:textColorHint="@color/white"
+                android:layout_marginBottom="16dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_search_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/rb_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Num"
+                    android:textColor="@color/white"
+                    />
+
+
+                <RadioButton
+                    android:id="@+id/rb_marque"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Marque"
+                    android:textColor="@color/white"/>
+
+
+                <RadioButton
+                    android:id="@+id/rb_annee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Année"
+                    android:textColor="@color/white"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_prix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prix"
+                    android:textColor="@color/white"
+                    />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Votre recherche ici"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btn_go"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Go"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Résultat recherche"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/btn_prev"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/precedent"                    />
+
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/suivant"
+                    android:layout_marginLeft="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_modify"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Modifier" />
+
+                <Button
+                    android:id="@+id/btn_delete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Supprimer"
+                    android:layout_marginLeft="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+

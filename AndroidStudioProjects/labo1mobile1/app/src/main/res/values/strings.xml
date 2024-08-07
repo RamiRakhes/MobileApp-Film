@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">labo1mobile1</string>
+    <string name="precedent"><![CDATA[<<<]]></string>
+    <string name="suivant"><![CDATA[>>>]]></string>
+</resources>
